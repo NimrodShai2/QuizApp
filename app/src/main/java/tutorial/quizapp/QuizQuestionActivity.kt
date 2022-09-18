@@ -23,6 +23,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
         questionsList = Constants.getQuestions()
+        questionsList!!.shuffle()
         exhibitQuestion()
         tv_option1.setOnClickListener(this)
         tv_option2.setOnClickListener(this)
